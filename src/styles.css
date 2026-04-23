@@ -147,5 +147,53 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    background-image:
+      radial-gradient(circle at 10% 0%, oklch(0.92 0.04 25 / 0.25), transparent 40%),
+      radial-gradient(circle at 90% 100%, oklch(0.88 0.06 15 / 0.18), transparent 45%);
+    background-attachment: fixed;
   }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+}
+
+@utility container-narrow {
+  width: 100%;
+  max-width: 72rem;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+@utility ink-divider {
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: "";
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: var(--primary);
+    margin: 0.75rem auto 0;
+    border-radius: 2px;
+  }
+}
+
+@keyframes float-petal {
+  0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+  10% { opacity: 0.7; }
+  90% { opacity: 0.7; }
+  100% { transform: translateY(110vh) translateX(40px) rotate(360deg); opacity: 0; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@utility animate-fade-up {
+  animation: fade-up 0.8s ease-out both;
 }
