@@ -9,8 +9,32 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as TurlarRouteImport } from './routes/turlar'
+import { Route as IletisimRouteImport } from './routes/iletisim'
+import { Route as HakkimdaRouteImport } from './routes/hakkimda'
+import { Route as GaleriRouteImport } from './routes/galeri'
 import { Route as IndexRouteImport } from './routes/index'
 
+const TurlarRoute = TurlarRouteImport.update({
+  id: '/turlar',
+  path: '/turlar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const IletisimRoute = IletisimRouteImport.update({
+  id: '/iletisim',
+  path: '/iletisim',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HakkimdaRoute = HakkimdaRouteImport.update({
+  id: '/hakkimda',
+  path: '/hakkimda',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const GaleriRoute = GaleriRouteImport.update({
+  id: '/galeri',
+  path: '/galeri',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +43,72 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
+  '/hakkimda': typeof HakkimdaRoute
+  '/iletisim': typeof IletisimRoute
+  '/turlar': typeof TurlarRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
+  '/hakkimda': typeof HakkimdaRoute
+  '/iletisim': typeof IletisimRoute
+  '/turlar': typeof TurlarRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/galeri': typeof GaleriRoute
+  '/hakkimda': typeof HakkimdaRoute
+  '/iletisim': typeof IletisimRoute
+  '/turlar': typeof TurlarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/turlar'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/turlar'
+  id: '__root__' | '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/turlar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GaleriRoute: typeof GaleriRoute
+  HakkimdaRoute: typeof HakkimdaRoute
+  IletisimRoute: typeof IletisimRoute
+  TurlarRoute: typeof TurlarRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/turlar': {
+      id: '/turlar'
+      path: '/turlar'
+      fullPath: '/turlar'
+      preLoaderRoute: typeof TurlarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/iletisim': {
+      id: '/iletisim'
+      path: '/iletisim'
+      fullPath: '/iletisim'
+      preLoaderRoute: typeof IletisimRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hakkimda': {
+      id: '/hakkimda'
+      path: '/hakkimda'
+      fullPath: '/hakkimda'
+      preLoaderRoute: typeof HakkimdaRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/galeri': {
+      id: '/galeri'
+      path: '/galeri'
+      fullPath: '/galeri'
+      preLoaderRoute: typeof GaleriRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +121,10 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GaleriRoute: GaleriRoute,
+  HakkimdaRoute: HakkimdaRoute,
+  IletisimRoute: IletisimRoute,
+  TurlarRoute: TurlarRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
