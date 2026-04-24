@@ -139,6 +139,31 @@ function ToursPage() {
           </div>
         </article>
 
+        <section className="mb-10 grid gap-6 rounded-lg border border-border bg-card p-6 md:grid-cols-2 md:p-8">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Fiyatlandırma</p>
+            <h2 className="mt-3 text-2xl">Fiyatlandırma & Esneklik Politikası</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Belirtilen fiyatlar yalnızca gezi ve eşlik hizmeti ücretidir. Paket dışında sizden ekstra bir ücret talep edilmez.
+              Rehberlik süresince kendi ulaşım ve yemek masraflarımı kendim karşılıyorum.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Sizden yalnızca kendi kişisel harcamalarınız; ulaşım, yemek, giriş ücretleri ve benzeri masraflar beklenir.
+            </p>
+          </div>
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Esneklik</p>
+            <h2 className="mt-3 text-2xl">Rota Değişikliği & Ek Talepler</h2>
+            <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
+              Tur sırasında planlanan rota dışında farklı bir bölgeye geçmek, yeni bir lokasyon eklemek veya süreyi uzatmak gibi
+              durumlarda ek ücret uygulanabilir.
+            </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Ek ücret, talebe göre önceden net şekilde belirtilir ve onayınız alınmadan uygulanmaz.
+            </p>
+          </div>
+        </section>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((t) => (
             <article key={t.title} className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-primary/45">
