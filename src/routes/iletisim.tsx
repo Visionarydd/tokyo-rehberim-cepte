@@ -1,22 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
-import { MessageCircle, Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 
 export const Route = createFileRoute("/iletisim")({
   head: () => ({
     meta: [
-      { title: "İletişim — Sakura Rehber" },
-      { name: "description", content: "Japonya turu için WhatsApp, e-posta veya form ile iletişime geçin." },
-      { property: "og:title", content: "İletişim — Sakura Rehber" },
-      { property: "og:description", content: "Rezervasyon ve sorularınız için WhatsApp ve form." },
+      { title: "İletişim — Tokyo Türkçe Rehber" },
+      { name: "description", content: "Tokyo'da Türkçe rehberlik için WhatsApp üzerinden hızlıca plan sorun." },
+      { property: "og:title", content: "İletişim — Tokyo Türkçe Rehber" },
+      { property: "og:description", content: "Tokyo geziniz veya yeni geliş süreciniz için Türkçe destek alın." },
     ],
   }),
   component: ContactPage,
 });
 
 const WHATSAPP = "+810000000000";
-const EMAIL = "merhaba@sakurarehber.com";
+const EMAIL = "merhaba@tokyorehber.com";
 
 function ContactPage() {
   const [sent, setSent] = useState(false);
@@ -24,7 +24,7 @@ function ContactPage() {
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
-    const text = `Merhaba! Adım ${data.get("name")}. ${data.get("message")} (Tarih: ${data.get("date") || "esnek"})`;
+    const text = `Merhaba! Tokyo'da Türkçe rehberlik için yazıyorum. Adım ${data.get("name")}. Kişi sayısı: ${data.get("people")}. Tarih: ${data.get("date") || "esnek"}. Mesajım: ${data.get("message")}`;
     const url = `https://wa.me/${WHATSAPP.replace(/\D/g, "")}?text=${encodeURIComponent(text)}`;
     window.open(url, "_blank");
     setSent(true);
@@ -33,108 +33,98 @@ function ContactPage() {
   return (
     <SiteLayout>
       <section className="container-narrow py-16 md:py-20">
-        <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
-          <p className="text-primary text-xs tracking-[0.3em] uppercase mb-3">連絡 · İletişim</p>
-          <h1 className="font-serif text-4xl md:text-5xl ink-divider">Tanışalım</h1>
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary">İletişim</p>
+          <h1 className="text-4xl md:text-5xl">Tokyo planını yaz, birlikte sadeleştirelim.</h1>
           <p className="mt-6 text-muted-foreground">
-            En hızlı yanıt için WhatsApp'tan yazabilir, ya da aşağıdaki formu doldurabilirsin.
+            Ne zaman geleceğini, kaç kişi olduğunu ve nasıl bir gezi istediğini gönder; en uygun planı konuşalım.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-5 gap-8">
-          {/* Form */}
-          <form
-            onSubmit={handleSubmit}
-            className="md:col-span-3 bg-card border border-border/60 rounded-sm p-6 md:p-8 space-y-4"
-          >
+        <div className="grid gap-8 md:grid-cols-5">
+          <form onSubmit={handleSubmit} className="soft-panel space-y-4 rounded-lg p-6 md:col-span-3 md:p-8">
             <div>
-              <label className="block text-sm mb-1.5">Adın</label>
+              <label className="mb-1.5 block text-sm font-medium">Adın</label>
               <input
                 name="name"
                 required
-                className="w-full px-3 py-2.5 bg-background border border-input rounded-sm text-sm focus:outline-none focus:border-primary"
+                className="w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
                 placeholder="Ahmet Yılmaz"
               />
             </div>
-            <div className="grid grid-cols-2 gap-4">
-              <div>
-                <label className="block text-sm mb-1.5">E-posta</label>
+            <div className="grid gap-4 sm:grid-cols-3">
+              <div className="sm:col-span-1">
+                <label className="mb-1.5 block text-sm font-medium">Kişi sayısı</label>
+                <input
+                  name="people"
+                  required
+                  className="w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
+                  placeholder="2"
+                />
+              </div>
+              <div className="sm:col-span-2">
+                <label className="mb-1.5 block text-sm font-medium">E-posta</label>
                 <input
                   name="email"
                   type="email"
                   required
-                  className="w-full px-3 py-2.5 bg-background border border-input rounded-sm text-sm focus:outline-none focus:border-primary"
+                  className="w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
                   placeholder="ornek@mail.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm mb-1.5">Tarih</label>
-                <input
-                  name="date"
-                  type="date"
-                  className="w-full px-3 py-2.5 bg-background border border-input rounded-sm text-sm focus:outline-none focus:border-primary"
                 />
               </div>
             </div>
             <div>
-              <label className="block text-sm mb-1.5">Mesajın</label>
+              <label className="mb-1.5 block text-sm font-medium">Tarih</label>
+              <input
+                name="date"
+                type="date"
+                className="w-full rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium">Nasıl bir destek istiyorsun?</label>
               <textarea
                 name="message"
                 required
                 rows={5}
-                className="w-full px-3 py-2.5 bg-background border border-input rounded-sm text-sm focus:outline-none focus:border-primary resize-none"
-                placeholder="Hangi şehirler? Kaç kişi? Ne ilgini çekiyor?"
+                className="w-full resize-none rounded-md border border-input bg-background px-3 py-2.5 text-sm outline-none transition-colors focus:border-primary"
+                placeholder="İlk kez geliyorum, 3 günüm var. Daha çok yemek, alışveriş ve fotoğraf noktaları ilgimi çekiyor."
               />
             </div>
             <button
               type="submit"
-              className="w-full inline-flex items-center justify-center gap-2 rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+              className="inline-flex w-full items-center justify-center gap-2 rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
             >
-              <MessageCircle size={16} /> WhatsApp ile Gönder
+              <MessageCircle size={16} /> WhatsApp ile gönder
             </button>
-            {sent && (
-              <p className="text-xs text-muted-foreground text-center">
-                WhatsApp açıldı. Açılmadıysa aşağıdaki butonu kullan.
-              </p>
-            )}
+            {sent && <p className="text-center text-xs text-muted-foreground">WhatsApp açıldı. Açılmadıysa yandaki direkt bağlantıyı kullanabilirsin.</p>}
           </form>
 
-          {/* Sidebar */}
-          <aside className="md:col-span-2 space-y-3">
-            <a
-              href={`https://wa.me/${WHATSAPP.replace(/\D/g, "")}`}
-              target="_blank"
-              rel="noopener"
-              className="flex items-start gap-4 p-5 bg-card border border-border/60 rounded-sm hover:border-primary/40 transition-colors"
-            >
-              <div className="text-primary mt-0.5"><MessageCircle size={20} /></div>
+          <aside className="space-y-3 md:col-span-2">
+            <a href={`https://wa.me/${WHATSAPP.replace(/\D/g, "")}`} target="_blank" rel="noopener" className="flex items-start gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/45">
+              <MessageCircle className="mt-0.5 text-primary" size={20} />
               <div>
-                <div className="font-medium text-sm">WhatsApp</div>
-                <div className="text-xs text-muted-foreground mt-0.5">{WHATSAPP}</div>
-                <div className="text-xs text-primary mt-2">Direkt yaz →</div>
+                <div className="text-sm font-semibold">WhatsApp</div>
+                <div className="mt-0.5 text-xs text-muted-foreground">{WHATSAPP}</div>
+                <div className="mt-2 text-xs font-medium text-primary">Direkt yaz →</div>
               </div>
             </a>
-            <a
-              href={`mailto:${EMAIL}`}
-              className="flex items-start gap-4 p-5 bg-card border border-border/60 rounded-sm hover:border-primary/40 transition-colors"
-            >
-              <div className="text-primary mt-0.5"><Mail size={20} /></div>
+            <a href={`mailto:${EMAIL}`} className="flex items-start gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/45">
+              <Mail className="mt-0.5 text-primary" size={20} />
               <div>
-                <div className="font-medium text-sm">E-posta</div>
-                <div className="text-xs text-muted-foreground mt-0.5">{EMAIL}</div>
+                <div className="text-sm font-semibold">E-posta</div>
+                <div className="mt-0.5 text-xs text-muted-foreground">{EMAIL}</div>
               </div>
             </a>
-            <div className="flex items-start gap-4 p-5 bg-card border border-border/60 rounded-sm">
-              <div className="text-primary mt-0.5"><MapPin size={20} /></div>
+            <div className="flex items-start gap-4 rounded-lg border border-border bg-card p-5">
+              <MapPin className="mt-0.5 text-primary" size={20} />
               <div>
-                <div className="font-medium text-sm">Konum</div>
-                <div className="text-xs text-muted-foreground mt-0.5">
-                  Tokyo merkezli · Tüm Japonya
-                </div>
+                <div className="text-sm font-semibold">Konum</div>
+                <div className="mt-0.5 text-xs text-muted-foreground">Tokyo merkezli · Esnek buluşma noktası</div>
               </div>
             </div>
-            <div className="p-5 bg-secondary rounded-sm text-xs text-muted-foreground leading-relaxed">
-              Genelde 24 saat içinde yanıt veriyorum. Japonya saatiyle 09:00–22:00 arası daha hızlıyım. 🌸
+            <div className="rounded-lg bg-secondary p-5 text-xs leading-relaxed text-muted-foreground">
+              Genelde 24 saat içinde dönüş yaparım. Plan net değilse sorun değil; beraber netleştiririz.
             </div>
           </aside>
         </div>

@@ -10,49 +10,50 @@ import sakura from "@/assets/gallery-sakura.jpg";
 export const Route = createFileRoute("/galeri")({
   head: () => ({
     meta: [
-      { title: "Galeri — Sakura Rehber" },
-      { name: "description", content: "Japonya'dan kareler: Fuji, Kyoto, Tokyo ve daha fazlası." },
-      { property: "og:title", content: "Galeri — Sakura Rehber" },
-      { property: "og:description", content: "Turlardan ve Japonya'nın dört bir yanından fotoğraflar." },
-      { property: "og:image", content: fuji },
+      { title: "Galeri — Tokyo Türkçe Rehber" },
+      { name: "description", content: "Tokyo ve Japonya'dan rota ilhamı: şehir, yemek, kültür ve fotoğraf noktaları." },
+      { property: "og:title", content: "Galeri — Tokyo Türkçe Rehber" },
+      { property: "og:description", content: "Tokyo gezisi için temiz, modern ve ilham veren Japonya kareleri." },
+      { property: "og:image", content: tokyo },
+      { name: "twitter:image", content: tokyo },
     ],
   }),
   component: GalleryPage,
 });
 
 const items = [
-  { img: torii, caption: "Fushimi Inari, Kyoto" },
-  { img: fuji, caption: "Fuji & Chureito Pagoda" },
-  { img: kyoto, caption: "Gion sokakları, Kyoto" },
-  { img: tokyo, caption: "Shibuya gece, Tokyo" },
-  { img: food, caption: "Tonkotsu ramen" },
-  { img: sakura, caption: "Sakura mevsimi" },
+  { img: tokyo, caption: "Tokyo gece yürüyüşü" },
+  { img: food, caption: "Bütçe dostu lezzet rotaları" },
+  { img: sakura, caption: "Sakura sezonu" },
+  { img: torii, caption: "Kültür ve tapınak atmosferi" },
+  { img: fuji, caption: "Günübirlik kaçamak planları" },
+  { img: kyoto, caption: "Sakin sokaklar ve fotoğraf noktaları" },
 ];
 
 function GalleryPage() {
   return (
     <SiteLayout>
       <section className="container-narrow py-16 md:py-20">
-        <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
-          <p className="text-primary text-xs tracking-[0.3em] uppercase mb-3">写真 · Galeri</p>
-          <h1 className="font-serif text-4xl md:text-5xl ink-divider">Japonya'dan kareler</h1>
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary">Galeri</p>
+          <h1 className="text-4xl md:text-5xl">Tokyo planına ilham olacak kareler</h1>
+          <p className="mt-5 text-muted-foreground">
+            Geziler; yoğun tur programından çok, rahat tempo ve güzel anlar üzerine kurulu.
+          </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 md:gap-4">
           {items.map((it, i) => (
-            <figure
-              key={it.caption}
-              className={`group relative overflow-hidden rounded-sm ${i % 5 === 0 ? "md:col-span-2 md:row-span-2" : ""}`}
-            >
+            <figure key={it.caption} className={`group relative overflow-hidden rounded-lg bg-card ${i === 0 || i === 4 ? "md:col-span-2" : ""}`}>
               <img
                 src={it.img}
                 alt={it.caption}
                 loading="lazy"
                 width={1024}
                 height={1024}
-                className="w-full h-full object-cover aspect-square group-hover:scale-105 transition-transform duration-700"
+                className="aspect-square h-full w-full object-cover transition-transform duration-700 group-hover:scale-105 md:aspect-[4/3]"
               />
-              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent p-3 text-background text-xs opacity-0 group-hover:opacity-100 transition-opacity">
+              <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-foreground/80 to-transparent p-4 text-xs font-medium text-background">
                 {it.caption}
               </figcaption>
             </figure>
