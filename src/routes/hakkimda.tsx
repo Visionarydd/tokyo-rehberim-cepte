@@ -5,10 +5,12 @@ import sakura from "@/assets/gallery-sakura.jpg";
 export const Route = createFileRoute("/hakkimda")({
   head: () => ({
     meta: [
-      { title: "Hakkımda — Sakura Rehber" },
-      { name: "description", content: "Japonya'da yaşayan bir Türk öğrenci olarak gezi rehberliği yapıyorum." },
-      { property: "og:title", content: "Hakkımda — Sakura Rehber" },
-      { property: "og:description", content: "Japonya'da Türk öğrenci rehber. Samimi, uygun fiyatlı turlar." },
+      { title: "Hakkımda — Tokyo Türkçe Rehber" },
+      { name: "description", content: "Tokyo'da yaşayan Türk öğrenci rehber: samimi, güvenilir ve bütçe dostu gezi desteği." },
+      { property: "og:title", content: "Hakkımda — Tokyo Türkçe Rehber" },
+      { property: "og:description", content: "Tokyo'yu arkadaş gibi gezdiren Türkçe öğrenci rehber." },
+      { property: "og:image", content: sakura },
+      { name: "twitter:image", content: sakura },
     ],
   }),
   component: AboutPage,
@@ -17,55 +19,48 @@ export const Route = createFileRoute("/hakkimda")({
 function AboutPage() {
   return (
     <SiteLayout>
-      <section className="container-narrow py-20 grid md:grid-cols-5 gap-12 items-start">
-        <div className="md:col-span-2 animate-fade-up">
+      <section className="container-narrow grid gap-12 py-16 md:grid-cols-5 md:items-start md:py-20">
+        <div className="md:col-span-2">
           <img
             src={sakura}
-            alt="Sakura çiçekleri"
+            alt="Tokyo'da sakura mevsimi"
             loading="lazy"
             width={1024}
             height={1024}
-            className="rounded-sm w-full"
+            className="aspect-[4/5] w-full rounded-lg object-cover shadow-xl"
           />
         </div>
-        <div className="md:col-span-3 animate-fade-up">
-          <p className="text-primary text-xs tracking-[0.3em] uppercase mb-3">Hakkımda</p>
-          <h1 className="font-serif text-4xl md:text-5xl leading-tight">
-            Merhaba, ben <span className="text-primary">[İsim]</span>.
-          </h1>
-          <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
+        <div className="md:col-span-3">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary">Hakkımda</p>
+          <h1 className="text-4xl leading-tight md:text-5xl">Tokyo'da öğrenciyim; gezide yanında güvenilir bir Türk arkadaş gibi olurum.</h1>
+          <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Tokyo'da üniversite öğrencisiyim ve birkaç yıldır Japonya'da yaşıyorum.
-              Buraya gelen Türk gezginlerin dil ve kültür farkından dolayı yaşadığı
-              tereddütleri bizzat gördüğüm için bu işe başladım.
+              Japonya'ya ilk geldiğimde metrodan yemek siparişine kadar birçok şeyin dışarıdan göründüğünden daha karmaşık olduğunu fark ettim. Bu yüzden Tokyo'ya gelen Türklere daha rahat, anlaşılır ve samimi bir deneyim sunmak istiyorum.
             </p>
             <p>
-              Profesyonel turlardan farklı olarak küçük gruplarla, esnek programlarla
-              ve uygun fiyatlarla geziyoruz. Amacım sana Japonya'yı bir turist gibi
-              değil, burada yaşayan biri gibi göstermek.
+              Amacım pahalı ve mesafeli bir tur vermek değil; şehri güvenle gezebileceğin, soru sorabileceğin ve bütçeni koruyabileceğin bir plan hazırlamak.
             </p>
             <p>
-              Japonca konuşuyorum, şehirleri biliyorum ve elbette en iyi ramen'in
-              nerede olduğunu da. 🍜
+              İstersen klasik noktaları gezeriz, istersen daha lokal mahallelere, uygun restoranlara ve fotoğraf rotalarına bakarız.
             </p>
           </div>
 
-          <div className="mt-10 grid grid-cols-3 gap-4">
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
             {[
-              { n: "3+", l: "Yıl Japonya'da" },
-              { n: "50+", l: "Mutlu misafir" },
-              { n: "8", l: "Şehir" },
+              { n: "TR", l: "Türkçe rahat iletişim" },
+              { n: "Tokyo", l: "Yerel günlük destek" },
+              { n: "Esnek", l: "Bütçene göre plan" },
             ].map((s) => (
-              <div key={s.l} className="bg-card border border-border/60 p-5 rounded-sm text-center">
-                <div className="font-serif text-3xl text-primary">{s.n}</div>
-                <div className="text-xs text-muted-foreground mt-1">{s.l}</div>
+              <div key={s.l} className="soft-panel rounded-lg p-5">
+                <div className="text-2xl font-bold text-primary">{s.n}</div>
+                <div className="mt-1 text-xs text-muted-foreground">{s.l}</div>
               </div>
             ))}
           </div>
 
           <Link
             to="/iletisim"
-            className="inline-flex mt-10 items-center justify-center rounded-sm bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:bg-primary/90 transition-colors"
+            className="mt-10 inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
             Tanışalım
           </Link>
