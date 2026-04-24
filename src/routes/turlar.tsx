@@ -164,6 +164,39 @@ function ToursPage() {
           </div>
         </section>
 
+        <section className="mb-10 rounded-lg border border-border bg-card p-6 md:p-8">
+          <div className="grid gap-6 md:grid-cols-3">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Katılım</p>
+              <h2 className="mt-3 text-2xl">Katılım & Grup Politikası</h2>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li>• Turlar maksimum 6 kişi ile sınırlıdır.</li>
+                <li>• Çocuklu ailelerde bu sayı 7–8 kişiye kadar esnetilebilir.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Çocuklar</p>
+              <h2 className="mt-3 text-2xl">Çocuk Politikası</h2>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li>• 12 yaş altı çocuklardan ücret talep edilmez.</li>
+                <li>• Çocuklar yalnızca ebeveyn veya velisi ile birlikte katılabilir.</li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Notlar</p>
+              <h2 className="mt-3 text-2xl">Önemli Notlar</h2>
+              <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                <li>• Grup sayısı, turun verimli ve konforlu geçmesi için sınırlıdır.</li>
+                <li>• 6 kişi üzeri yetişkin gruplar için lütfen önceden iletişime geçiniz.</li>
+                <li>• Rota ve tempo, grup yapısına göre ayarlanır.</li>
+              </ul>
+            </div>
+          </div>
+          <p className="mt-6 border-t border-border pt-5 text-sm font-medium text-foreground">
+            Amacım daha rahat, samimi ve kaliteli bir gezi deneyimi sunmak.
+          </p>
+        </section>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((t) => (
             <article key={t.title} className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-primary/45">
