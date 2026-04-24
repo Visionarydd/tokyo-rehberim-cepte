@@ -10,11 +10,12 @@ import sakura from "@/assets/gallery-sakura.jpg";
 export const Route = createFileRoute("/turlar")({
   head: () => ({
     meta: [
-      { title: "Turlar & Fiyatlar — Sakura Rehber" },
-      { name: "description", content: "Tokyo, Kyoto, Osaka ve Fuji turları. Türkçe rehber eşliğinde uygun fiyatlı paketler." },
-      { property: "og:title", content: "Japonya Turları — Sakura Rehber" },
-      { property: "og:description", content: "Şehir turları, gece yürüyüşleri ve günübirlik kaçamaklar. Öğrenci bütçesine uygun." },
-      { property: "og:image", content: torii },
+      { title: "Hizmetler & Örnek Ücretler — Tokyo Türkçe Rehber" },
+      { name: "description", content: "Tokyo'da Türkçe rehberlik, ilk gün desteği, yemek rotası ve kişiye özel gezi planları." },
+      { property: "og:title", content: "Tokyo Türkçe Rehberlik Hizmetleri" },
+      { property: "og:description", content: "Samimi, güvenilir ve öğrenci dostu Tokyo gezi hizmetleri." },
+      { property: "og:image", content: tokyo },
+      { name: "twitter:image", content: tokyo },
     ],
   }),
   component: ToursPage,
@@ -24,50 +25,50 @@ const tours = [
   {
     img: tokyo,
     city: "Tokyo",
-    title: "Tokyo Klasikleri",
-    duration: "Tam gün · 8 saat",
-    price: "¥7.000",
-    desc: "Shibuya, Shinjuku, Asakusa ve Akihabara. Şehrin kalbi tek günde.",
-  },
-  {
-    img: torii,
-    city: "Kyoto",
-    title: "Tapınaklar & Torii Yolu",
-    duration: "Tam gün · 7 saat",
-    price: "¥6.000",
-    desc: "Fushimi Inari, Kinkaku-ji ve Arashiyama bambu ormanı.",
-  },
-  {
-    img: kyoto,
-    city: "Kyoto",
-    title: "Gion Gece Yürüyüşü",
-    duration: "Akşam · 3 saat",
-    price: "¥4.500",
-    desc: "Geyşa mahallesinde lanternlı sokaklar ve geleneksel atmosfer.",
+    title: "İlk Gün Tokyo Desteği",
+    duration: "3-4 saat",
+    price: "¥5.000'den itibaren",
+    desc: "Metro kartı, SIM/eSIM, temel alışveriş, Shibuya-Shinjuku çevresi ve şehir mantığını oturtma.",
   },
   {
     img: food,
-    city: "Tokyo / Osaka",
-    title: "Sokak Lezzetleri Turu",
-    duration: "Akşam · 4 saat",
-    price: "¥5.500",
-    desc: "Ramen, takoyaki, izakaya — yiyecek dahil değil, rehber dahil.",
+    city: "Tokyo",
+    title: "Yemek & Günlük Hayat Turu",
+    duration: "4 saat",
+    price: "¥5.500'den itibaren",
+    desc: "Ramen, market kültürü, uygun restoranlar, kafe molası ve Japonya'da sipariş verme desteği.",
+  },
+  {
+    img: torii,
+    city: "Tokyo / çevre",
+    title: "Kültür & Fotoğraf Rotası",
+    duration: "5 saat",
+    price: "¥6.500'den itibaren",
+    desc: "Tapınak, sakin sokaklar, güzel fotoğraf noktaları ve kültürel detayları Türkçe anlatım.",
+  },
+  {
+    img: kyoto,
+    city: "Planlama",
+    title: "Yeni Gelenlere Uyum Paketi",
+    duration: "2 saat görüşme + rota",
+    price: "¥4.000'den itibaren",
+    desc: "Tokyo'ya yeni taşınanlar için mahalle, ulaşım, market ve günlük yaşam önerileri.",
   },
   {
     img: fuji,
-    city: "Fuji",
-    title: "Fuji & Hakone Kaçamağı",
-    duration: "Tam gün · 10 saat",
-    price: "¥9.500",
-    desc: "Tokyo'dan günübirlik. Gölet, pagoda ve onsen molası.",
+    city: "Günübirlik",
+    title: "Fuji / Kamakura Planı",
+    duration: "Tam gün",
+    price: "Talebe göre",
+    desc: "Ulaşım seçenekleri, hava durumuna göre rota ve yorucu olmayan günübirlik gezi planı.",
   },
   {
     img: sakura,
     city: "Esnek",
-    title: "Sana Özel Rota",
+    title: "Sana Özel Arkadaş Gibi Gezi",
     duration: "Kararlaştırırız",
-    price: "Talebe göre",
-    desc: "İlgilerine, bütçene ve zamanına göre tamamen kişiye özel program.",
+    price: "Bütçeye göre",
+    desc: "İlgi alanına, kalış sürene ve bütçene göre tamamen kişisel Tokyo programı.",
   },
 ];
 
@@ -75,45 +76,34 @@ function ToursPage() {
   return (
     <SiteLayout>
       <section className="container-narrow py-16 md:py-20">
-        <div className="text-center max-w-2xl mx-auto mb-12 animate-fade-up">
-          <p className="text-primary text-xs tracking-[0.3em] uppercase mb-3">Turlar</p>
-          <h1 className="font-serif text-4xl md:text-5xl ink-divider">Paketler & Fiyatlar</h1>
+        <div className="mx-auto mb-12 max-w-2xl text-center">
+          <p className="mb-3 text-xs font-semibold uppercase tracking-[0.22em] text-primary">Hizmetler</p>
+          <h1 className="text-4xl md:text-5xl">Paketler değil, sana uyan rahat planlar</h1>
           <p className="mt-6 text-muted-foreground">
-            Fiyatlar kişi başıdır, ulaşım ve giriş ücretleri dahil değildir.
-            2+ kişilik gruplara indirim uygulanır.
+            Ücretler örnek başlangıç fiyatıdır. Kişi sayısı, süre ve rotaya göre netleştirilir; ulaşım ve giriş ücretleri dahil değildir.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((t) => (
-            <article
-              key={t.title}
-              className="group flex flex-col bg-card border border-border/60 rounded-sm overflow-hidden hover:border-primary/40 transition-colors"
-            >
-              <div className="aspect-[4/3] overflow-hidden">
-                <img
-                  src={t.img}
-                  alt={t.title}
-                  loading="lazy"
-                  width={1024}
-                  height={1024}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-                />
-              </div>
-              <div className="p-6 flex flex-col flex-1">
-                <p className="text-xs text-primary tracking-widest uppercase">{t.city}</p>
-                <h2 className="font-serif text-xl mt-1">{t.title}</h2>
-                <p className="text-xs text-muted-foreground mt-1">{t.duration}</p>
-                <p className="text-sm text-muted-foreground mt-3 leading-relaxed flex-1">
-                  {t.desc}
-                </p>
-                <div className="mt-5 flex items-center justify-between border-t border-border/60 pt-4">
-                  <span className="font-serif text-lg text-primary">{t.price}</span>
-                  <Link
-                    to="/iletisim"
-                    className="text-xs text-foreground hover:text-primary transition-colors"
-                  >
-                    Rezervasyon →
+            <article key={t.title} className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-primary/45">
+              <img
+                src={t.img}
+                alt={t.title}
+                loading="lazy"
+                width={1024}
+                height={1024}
+                className="aspect-[4/3] w-full object-cover transition-transform duration-700 group-hover:scale-105"
+              />
+              <div className="flex flex-1 flex-col p-6">
+                <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">{t.city}</p>
+                <h2 className="mt-2 text-xl">{t.title}</h2>
+                <p className="mt-1 text-xs text-muted-foreground">{t.duration}</p>
+                <p className="mt-4 flex-1 text-sm leading-relaxed text-muted-foreground">{t.desc}</p>
+                <div className="mt-5 flex items-center justify-between border-t border-border pt-4">
+                  <span className="text-sm font-semibold text-foreground">{t.price}</span>
+                  <Link to="/iletisim" className="text-xs font-medium text-primary hover:underline">
+                    Sor →
                   </Link>
                 </div>
               </div>
