@@ -25,10 +25,10 @@ const tours = [
   {
     img: tokyo,
     city: "Tokyo",
-    title: "İlk Gün Tokyo Desteği",
-    duration: "3-4 saat",
-    price: "¥5.000'den itibaren",
-    desc: "Metro kartı, SIM/eSIM, temel alışveriş, Shibuya-Shinjuku çevresi ve şehir mantığını oturtma.",
+    title: "İlk Gün Karşılama & Destek Paketi",
+    duration: "Uçuş saatine göre planlanır",
+    price: "10.000 Yen",
+    desc: "Narita veya Haneda’da karşılama, şehre ulaşım, Suica/Pasmo, metro-tren kullanımı ve konaklama yerine kadar eşlik.",
   },
   {
     img: food,
@@ -83,6 +83,61 @@ function ToursPage() {
             Ücretler örnek başlangıç fiyatıdır. Kişi sayısı, süre ve rotaya göre netleştirilir; ulaşım ve giriş ücretleri dahil değildir.
           </p>
         </div>
+
+        <article className="mb-10 overflow-hidden rounded-lg border border-primary/25 bg-card shadow-sm">
+          <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
+            <img
+              src={tokyo}
+              alt="İlk Gün Karşılama ve Destek Paketi"
+              width={1200}
+              height={900}
+              className="h-full min-h-[280px] w-full object-cover"
+            />
+            <div className="p-6 md:p-8">
+              <p className="text-xs font-semibold uppercase tracking-[0.22em] text-primary">Öne çıkan paket</p>
+              <h2 className="mt-3 text-3xl md:text-4xl">İlk Gün Karşılama & Destek Paketi</h2>
+              <p className="mt-4 text-muted-foreground">
+                Tokyo’ya yeni gelen ve ilk gününde zorlanmak istemeyenler için birebir destek paketi. Havaalanından karşılayıp şehirde rahat hareket edebilmeniz için temel bilgileri birlikte hallediyoruz.
+              </p>
+
+              <div className="mt-6 grid gap-5 md:grid-cols-2">
+                <div>
+                  <h3 className="text-sm font-semibold text-foreground">Paket içeriği</h3>
+                  <ul className="mt-3 space-y-2 text-sm leading-relaxed text-muted-foreground">
+                    <li>• Narita / Haneda havaalanında karşılama</li>
+                    <li>• Şehre ulaşımın birlikte yapılması</li>
+                    <li>• Suica / Pasmo kartının birlikte alınması</li>
+                    <li>• Metro, tren, bilet alma ve yön bulma desteği</li>
+                    <li>• Konbini, yemek ve günlük yaşam bilgileri</li>
+                    <li>• Otelinize / konaklama yerinize kadar eşlik</li>
+                  </ul>
+                </div>
+                <div className="space-y-5">
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground">Kişi sayısı</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Fiyat 6 kişiye kadar sabittir. 6 kişi üzeri gruplar için iletişime geçebilirsiniz.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground">Fiyat</h3>
+                    <p className="mt-2 text-2xl font-semibold text-foreground">10.000 Yen</p>
+                    <p className="mt-1 text-sm text-muted-foreground">Türk Lirası karşılığı ve Türk kredi kartı ile ödeme imkanı bulunur.</p>
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-semibold text-foreground">Notlar</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">Ulaşım ücretleri müşteriye aittir. Ödeme hizmet öncesi veya başlangıcında yapılır.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-7 flex flex-col gap-3 border-t border-border pt-5 sm:flex-row sm:items-center sm:justify-between">
+                <p className="text-sm text-muted-foreground">Japonya’ya ilk kez gelenler ve ilk gün yönlendirme isteyenler için uygundur.</p>
+                <Link to="/iletisim" className="inline-flex items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90">
+                  Birlikte planlayalım
+                </Link>
+              </div>
+            </div>
+          </div>
+        </article>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((t) => (
