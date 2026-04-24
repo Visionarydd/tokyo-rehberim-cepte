@@ -115,7 +115,7 @@ function ToursPage() {
                 <div className="space-y-5">
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Kişi sayısı</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Fiyat 6 kişiye kadar sabittir. 6 kişi üzeri gruplar için iletişime geçebilirsiniz.</p>
+                    <p className="mt-2 text-sm text-muted-foreground">Fiyat 3 kişiye kadar sabittir. Daha fazlası için iletişime geçebilirsiniz.</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Fiyat</h3>
