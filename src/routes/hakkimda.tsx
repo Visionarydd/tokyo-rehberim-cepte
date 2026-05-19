@@ -44,7 +44,7 @@ function AboutPage() {
               Amacım pahalı ve mesafeli bir tur vermek değil; şehri güvenle gezebileceğin, soru sorabileceğin ve bütçeni koruyabileceğin bir plan hazırlamak.
             </p>
             <p>
-              İstersen klasik noktaları gezeriz, istersen daha lokal mahallelere, uygun restoranlara ve fotoğraf rotalarına bakarız.
+              İstersen klasik noktaları gezeriz, istersen daha lokal mahallelere, uygun restoranlara ve fotoğraf rotalarına bakarız. Nasıl bir gezi istediğinizi bildirirseniz ben de ona göre bir rota ayarlamaya çalışabilirim.
             </p>
           </div>
 
