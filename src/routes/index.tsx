@@ -112,6 +112,8 @@ function HomePage() {
               alt="Tokyo ve Japonya gezisi için Fuji manzarası"
               width={1600}
               height={1024}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[4/5] w-full rounded-lg object-cover shadow-2xl md:aspect-[5/6]"
             />
             <div className="soft-panel absolute bottom-5 left-5 right-5 rounded-lg p-4 backdrop-blur-md">
