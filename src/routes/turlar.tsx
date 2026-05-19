@@ -246,6 +246,21 @@ function ToursPage() {
           </div>
         </section>
 
+        <section className="mb-10 rounded-lg border border-border bg-card p-6 md:p-8">
+          <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Ödeme koşulları</p>
+          <h2 className="mt-3 text-2xl">Garanti Ücreti & İptal Politikası</h2>
+          <div className="mt-5 grid gap-5 md:grid-cols-2">
+            <div className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <p>Tüm ödemeler için tur öncesi <strong className="text-foreground">3.000 yen</strong> garanti ücreti alınır.</p>
+              <p>Tur gerçekleşirse bu ücret ödemeden düşülür.</p>
+            </div>
+            <div className="space-y-2 text-sm leading-relaxed text-muted-foreground">
+              <p>Rezervasyon gününden bir önceki geceye kadar iptal edilirse garanti ücreti geri ödenir.</p>
+              <p>Aksi halde 3.000 yen geri ödemesi maalesef yapılamaz.</p>
+            </div>
+          </div>
+        </section>
+
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tours.map((t) => (
             <article key={t.title} className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-colors hover:border-primary/45">
