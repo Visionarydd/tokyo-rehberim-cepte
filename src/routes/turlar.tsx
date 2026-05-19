@@ -152,7 +152,7 @@ function ToursPage() {
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Fiyat</h3>
                     <p className="mt-2 text-2xl font-semibold text-foreground">13.000 Yen</p>
-                    <p className="mt-1 text-sm text-muted-foreground">Türk Lirası karşılığı ve Türk kredi kartı ile ödeme imkanı bulunur.</p>
+                    <p className="mt-1 text-sm text-muted-foreground">Türk banka transferi veya Japonya'da nakit yen olarak ödeme yapılabilir.</p>
                   </div>
                 </div>
               </div>
