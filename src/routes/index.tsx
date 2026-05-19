@@ -20,6 +20,28 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: heroFuji },
       { name: "twitter:image", content: heroFuji },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Tokyo Türkçe Rehber",
+          description:
+            "Tokyo'da yaşayan Türk üniversite öğrencisi tarafından sunulan, uygun fiyatlı ve arkadaş gibi Türkçe rehberlik hizmeti.",
+          url: "https://tokyo-rehberim-cepte.lovable.app",
+          areaServed: { "@type": "City", name: "Tokyo" },
+          inLanguage: "tr",
+          priceRange: "$$",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer service",
+            availableLanguage: ["Turkish", "Japanese", "English"],
+            email: "cnbrkkrslh0001@gmail.com",
+          },
+        }),
+      },
+    ],
   }),
   component: HomePage,
 });
