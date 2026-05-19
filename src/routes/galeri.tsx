@@ -8,6 +8,7 @@ import gallery5 from "@/assets/gallery-5.png";
 import gallery6 from "@/assets/gallery-6.png";
 import gallery7 from "@/assets/gallery-7.png";
 import gallery8 from "@/assets/gallery-8.png";
+import gallery9 from "@/assets/gallery-9.png";
 
 export const Route = createFileRoute("/galeri")({
   head: () => ({
@@ -30,7 +31,7 @@ const items = [
   { img: gallery6, caption: "Tokyo sokak lezzetleri" },
   { img: gallery7, caption: "Tokyo Tower" },
   { img: gallery8, caption: "Odaiba sahili & Rainbow Bridge" },
-  { img: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1400&q=80", caption: "Sakura sezonu — Tokyo" },
+  { img: gallery9, caption: "Sakura sezonu — Tokyo" },
 ];
 
 function GalleryPage() {
