@@ -238,7 +238,7 @@ function ToursPage() {
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {["1 kişi: 13,000 – 15,000 yen", "2 kişi: 8,000 yen / kişi", "3–4 kişi: 6,000 yen / kişi", "5–6 kişi: 5,000 yen / kişi"].map((item) => (
+            {["1 kişi: 20,000 yen", "2 kişi: 13,000 yen / kişi", "3 kişi: 11,000 yen / kişi", "4 kişi: 9,000 yen / kişi", "5–6 kişi: 8,000 yen / kişi"].map((item) => (
               <div key={item} className="rounded-md border border-border bg-background p-4 text-sm font-semibold text-foreground">
                 {item}
               </div>
