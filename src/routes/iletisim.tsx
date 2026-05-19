@@ -15,7 +15,7 @@ export const Route = createFileRoute("/iletisim")({
   component: ContactPage,
 });
 
-const WHATSAPP = "+810000000000";
+const WHATSAPP = "08062325121";
 const EMAIL = "merhaba@tokyorehber.com";
 
 function ContactPage() {
@@ -105,7 +105,6 @@ function ContactPage() {
               <MessageCircle className="mt-0.5 text-primary" size={20} />
               <div>
                 <div className="text-sm font-semibold">WhatsApp</div>
-                <div className="mt-0.5 text-xs text-muted-foreground">{WHATSAPP}</div>
                 <div className="mt-2 text-xs font-medium text-primary">Direkt yaz →</div>
               </div>
             </a>
