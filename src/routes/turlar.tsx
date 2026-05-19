@@ -277,6 +277,9 @@ function ToursPage() {
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
                   Tur öncesi 3.000 yen garanti ücreti alınır. Tur gerçekleşirse ödemeden düşülür. Tur gününden bir önceki geceye kadar iptal edilirse geri ödenir.
                 </p>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  Ödeme: Türk banka transferi veya Japonya'da nakit yen olarak yapılabilir.
+                </p>
               </div>
             </article>
           ))}
