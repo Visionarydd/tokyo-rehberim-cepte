@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import sakura from "@/assets/gallery-sakura.jpg";
+import sakura from "@/assets/about-photo.jpg";
 
 export const Route = createFileRoute("/hakkimda")({
   head: () => ({
