@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin, MessageCircle, Mail } from "lucide-react";
 
 export const Route = createFileRoute("/iletisim")({
   head: () => ({
