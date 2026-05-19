@@ -41,6 +41,7 @@ export const Route = createRootRoute({
       { name: "twitter:description", content: "Tokyo’da yaşayan Türk üniversite öğrencisi ile uygun fiyatlı Tokyo turları. Shibuya, Shinjuku, Asakusa, sakura noktaları, yemek mekanları ve lokal deneyimler." },
       { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c2fa4ff7-7a58-499b-83f9-fa6ec88530f3" },
       { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c2fa4ff7-7a58-499b-83f9-fa6ec88530f3" },
+      { name: "google-site-verification", content: "44cROGsGOqXRmWGEtdiLn8WIqWqBbxn7LPgi3pw5_wA" },
     ],
     links: [
       {
