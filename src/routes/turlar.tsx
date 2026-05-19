@@ -152,7 +152,7 @@ function ToursPage() {
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Fiyat</h3>
                     <p className="mt-2 text-2xl font-semibold text-foreground">13.000 Yen</p>
-                    <p className="mt-1 text-sm text-muted-foreground">Türk Lirası karşılığı ve Türk kredi kartı ile ödeme imkanı bulunur.</p>
+                    <p className="mt-1 text-sm text-muted-foreground">Türk banka transferi veya Japonya'da nakit yen olarak ödeme yapılabilir.</p>
                   </div>
                 </div>
               </div>
@@ -235,6 +235,9 @@ function ToursPage() {
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Fiyatlar kişi sayısına göre belirlenir. Maksimum 5 yetişkin kabul edilmektedir.
             </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Ödeme: Türk banka transferi veya Japonya'da nakit yen olarak yapılabilir.
+            </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {["1 kişi: 20,000 yen", "2 kişi: 13,000 yen / kişi", "3 kişi: 11,000 yen / kişi", "4 kişi: 9,000 yen / kişi", "5 kişi: 8,000 yen / kişi"].map((item) => (
@@ -276,6 +279,9 @@ function ToursPage() {
                 </div>
                 <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
                   Tur öncesi 3.000 yen garanti ücreti alınır. Tur gerçekleşirse ödemeden düşülür. Tur gününden bir önceki geceye kadar iptal edilirse geri ödenir.
+                </p>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">
+                  Ödeme: Türk banka transferi veya Japonya'da nakit yen olarak yapılabilir.
                 </p>
               </div>
             </article>
