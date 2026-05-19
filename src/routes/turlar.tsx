@@ -147,7 +147,7 @@ function ToursPage() {
                 <div className="space-y-5">
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Kişi sayısı</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Fiyat 3 kişiye kadar sabittir. Daha fazlası için iletişime geçebilirsiniz.</p>
+                    <p className="mt-2 text-sm text-muted-foreground">Fiyat 3 kişiye kadar sabittir. Maksimum 5 yetişkin kabul edilmektedir.</p>
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Fiyat</h3>
@@ -201,8 +201,8 @@ function ToursPage() {
               <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Katılım</p>
               <h2 className="mt-3 text-2xl">Katılım & Grup Politikası</h2>
               <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
-                <li>• Turlar maksimum 6 kişi ile sınırlıdır.</li>
-                <li>• Çocuklu ailelerde bu sayı 7–8 kişiye kadar esnetilebilir.</li>
+                <li>• Turlar maksimum 5 yetişkin ile sınırlıdır.</li>
+                <li>• Çocuklu ailelerde bu sayı 6–7 kişiye kadar esnetilebilir.</li>
               </ul>
             </div>
             <div>
@@ -218,7 +218,7 @@ function ToursPage() {
               <h2 className="mt-3 text-2xl">Önemli Notlar</h2>
               <ul className="mt-4 space-y-2 text-sm leading-relaxed text-muted-foreground">
                 <li>• Grup sayısı, turun verimli ve konforlu geçmesi için sınırlıdır.</li>
-                <li>• 6 kişi üzeri yetişkin gruplar için lütfen önceden iletişime geçiniz.</li>
+                <li>• 5 kişi üzeri yetişkin gruplar kabul edilmemektedir.</li>
                 <li>• Rota ve tempo, grup yapısına göre ayarlanır.</li>
               </ul>
             </div>
@@ -233,11 +233,11 @@ function ToursPage() {
             <p className="text-xs font-semibold uppercase tracking-[0.18em] text-primary">Gezi paketleri</p>
             <h2 className="mt-3 text-2xl">Tokyo & çevresi fiyatlandırma</h2>
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Fiyatlar kişi sayısına göre belirlenir. 6 kişi üzeri yetişkin gruplar için lütfen önceden iletişime geçiniz.
+              Fiyatlar kişi sayısına göre belirlenir. Maksimum 5 yetişkin kabul edilmektedir.
             </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
-            {["1 kişi: 20,000 yen", "2 kişi: 13,000 yen / kişi", "3 kişi: 11,000 yen / kişi", "4 kişi: 9,000 yen / kişi", "5–6 kişi: 8,000 yen / kişi"].map((item) => (
+            {["1 kişi: 20,000 yen", "2 kişi: 13,000 yen / kişi", "3 kişi: 11,000 yen / kişi", "4 kişi: 9,000 yen / kişi", "5 kişi: 8,000 yen / kişi"].map((item) => (
               <div key={item} className="rounded-md border border-border bg-background p-4 text-sm font-semibold text-foreground">
                 {item}
               </div>
