@@ -275,6 +275,9 @@ function ToursPage() {
                     Sor →
                   </Link>
                 </div>
+                <p className="mt-3 text-xs leading-relaxed text-muted-foreground">
+                  Tur öncesi 3.000 yen garanti ücreti alınır. Tur gerçekleşirse ödemeden düşülür. Tur gününden bir önceki geceye kadar iptal edilirse geri ödenir.
+                </p>
               </div>
             </article>
           ))}
