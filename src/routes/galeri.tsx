@@ -1,5 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
+import gallery1 from "@/assets/gallery-1.png";
+import gallery2 from "@/assets/gallery-2.png";
+import gallery3 from "@/assets/gallery-3.png";
+import gallery4 from "@/assets/gallery-4.png";
 
 export const Route = createFileRoute("/galeri")({
   head: () => ({
@@ -16,10 +20,10 @@ export const Route = createFileRoute("/galeri")({
 });
 
 const items = [
-  { img: "https://images.unsplash.com/photo-1542931287-023b922fa89b?w=1400&q=80", caption: "Shibuya Crossing — Tokyo" },
-  { img: "https://images.unsplash.com/photo-1554797589-7241bb691973?w=1400&q=80", caption: "Shinjuku gece sokakları" },
-  { img: "https://images.unsplash.com/photo-1570459027562-4a916cb6235e?w=1400&q=80", caption: "Asakusa · Senso-ji Tapınağı" },
-  { img: "https://images.unsplash.com/photo-1601981287877-d717e3bb83df?w=1400&q=80", caption: "Minato Mirai — Yokohama" },
+  { img: gallery1, caption: "Shibuya Crossing — Tokyo" },
+  { img: gallery2, caption: "Shinjuku gece sokakları" },
+  { img: gallery3, caption: "Asakusa · Senso-ji Tapınağı" },
+  { img: gallery4, caption: "Minato Mirai — Yokohama" },
   { img: "https://images.unsplash.com/photo-1565017228812-bea9c5dabe27?w=1400&q=80", caption: "Yokohama Çin Mahallesi" },
   { img: "https://images.unsplash.com/photo-1554797589-7241bb691973?w=1400&q=80", caption: "Tokyo sokak lezzetleri" },
   { img: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1400&q=80", caption: "Tokyo Tower" },
