@@ -35,7 +35,10 @@ function AboutPage() {
           <h1 className="text-4xl leading-tight md:text-5xl">Tokyo'da öğrenciyim; gezide yanında güvenilir bir Türk arkadaş gibi olurum.</h1>
           <div className="mt-6 space-y-4 leading-relaxed text-muted-foreground">
             <p>
-              Japonya'ya ilk geldiğimde metrodan yemek siparişine kadar birçok şeyin dışarıdan göründüğünden daha karmaşık olduğunu fark ettim. Bu yüzden Tokyo'ya gelen Türklere daha rahat, anlaşılır ve samimi bir deneyim sunmak istiyorum.
+              Ocak 2024'ten beri Japonya'da yaşıyorum. Şu an burada üniversite öğrencisiyim. Aileme yük olmamak için kendi çabalarımla para kazanmaya çalıştım; bu süreçte Japonya'da bir sürü farklı yarı zamanlı işte çalıştım.
+            </p>
+            <p>
+              Şimdi biraz daha rahat edebileceğim, eğlenebileceğim ve aynı zamanda Japonya'ya gelen Türklere küçük de olsa bir yardımım dokunacak bir şey yapmak istedim. Bu yüzden rehberlik fikri ortaya çıktı.
             </p>
             <p>
               Amacım pahalı ve mesafeli bir tur vermek değil; şehri güvenle gezebileceğin, soru sorabileceğin ve bütçeni koruyabileceğin bir plan hazırlamak.
