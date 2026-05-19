@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TurlarRouteImport } from './routes/turlar'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as IletisimRouteImport } from './routes/iletisim'
 import { Route as HakkimdaRouteImport } from './routes/hakkimda'
 import { Route as GaleriRouteImport } from './routes/galeri'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const TurlarRoute = TurlarRouteImport.update({
   id: '/turlar',
   path: '/turlar',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IletisimRoute = IletisimRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/galeri': typeof GaleriRoute
   '/hakkimda': typeof HakkimdaRoute
   '/iletisim': typeof IletisimRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/turlar': typeof TurlarRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/galeri': typeof GaleriRoute
   '/hakkimda': typeof HakkimdaRoute
   '/iletisim': typeof IletisimRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/turlar': typeof TurlarRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,28 @@ export interface FileRoutesById {
   '/galeri': typeof GaleriRoute
   '/hakkimda': typeof HakkimdaRoute
   '/iletisim': typeof IletisimRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/turlar': typeof TurlarRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/turlar'
+  fullPaths:
+    | '/'
+    | '/galeri'
+    | '/hakkimda'
+    | '/iletisim'
+    | '/sitemap.xml'
+    | '/turlar'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/turlar'
-  id: '__root__' | '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/turlar'
+  to: '/' | '/galeri' | '/hakkimda' | '/iletisim' | '/sitemap.xml' | '/turlar'
+  id:
+    | '__root__'
+    | '/'
+    | '/galeri'
+    | '/hakkimda'
+    | '/iletisim'
+    | '/sitemap.xml'
+    | '/turlar'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +98,7 @@ export interface RootRouteChildren {
   GaleriRoute: typeof GaleriRoute
   HakkimdaRoute: typeof HakkimdaRoute
   IletisimRoute: typeof IletisimRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TurlarRoute: typeof TurlarRoute
 }
 
@@ -86,6 +109,13 @@ declare module '@tanstack/react-router' {
       path: '/turlar'
       fullPath: '/turlar'
       preLoaderRoute: typeof TurlarRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/iletisim': {
@@ -124,6 +154,7 @@ const rootRouteChildren: RootRouteChildren = {
   GaleriRoute: GaleriRoute,
   HakkimdaRoute: HakkimdaRoute,
   IletisimRoute: IletisimRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   TurlarRoute: TurlarRoute,
 }
 export const routeTree = rootRouteImport

@@ -20,6 +20,28 @@ export const Route = createFileRoute("/")({
       { property: "og:image", content: heroFuji },
       { name: "twitter:image", content: heroFuji },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ProfessionalService",
+          name: "Tokyo Türkçe Rehber",
+          description:
+            "Tokyo'da yaşayan Türk üniversite öğrencisi tarafından sunulan, uygun fiyatlı ve arkadaş gibi Türkçe rehberlik hizmeti.",
+          url: "https://tokyo-rehberim-cepte.lovable.app",
+          areaServed: { "@type": "City", name: "Tokyo" },
+          inLanguage: "tr",
+          priceRange: "$$",
+          contactPoint: {
+            "@type": "ContactPoint",
+            contactType: "customer service",
+            availableLanguage: ["Turkish", "Japanese", "English"],
+            email: "cnbrkkrslh0001@gmail.com",
+          },
+        }),
+      },
+    ],
   }),
   component: HomePage,
 });
@@ -90,6 +112,8 @@ function HomePage() {
               alt="Tokyo ve Japonya gezisi için Fuji manzarası"
               width={1600}
               height={1024}
+              fetchPriority="high"
+              decoding="async"
               className="aspect-[4/5] w-full rounded-lg object-cover shadow-2xl md:aspect-[5/6]"
             />
             <div className="soft-panel absolute bottom-5 left-5 right-5 rounded-lg p-4 backdrop-blur-md">

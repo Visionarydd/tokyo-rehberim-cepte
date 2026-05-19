@@ -17,6 +17,27 @@ export const Route = createFileRoute("/turlar")({
       { property: "og:image", content: tokyo },
       { name: "twitter:image", content: tokyo },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Tokyo Türkçe Rehberlik Turları",
+          itemListElement: tours.map((t, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            item: {
+              "@type": "Service",
+              name: t.title,
+              description: t.desc,
+              areaServed: { "@type": "City", name: t.city },
+              provider: { "@type": "ProfessionalService", name: "Tokyo Türkçe Rehber" },
+            },
+          })),
+        }),
+      },
+    ],
   }),
   component: ToursPage,
 });

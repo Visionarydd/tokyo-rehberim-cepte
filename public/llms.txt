@@ -1,0 +1,11 @@
+# Tokyo Rehberi
+
+> Tokyo'da yaşayan Türk üniversite öğrencisi tarafından sunulan, uygun fiyatlı ve arkadaş gibi Türkçe rehberlik hizmeti. Tokyo'ya gelen Türklere şehri stressiz keşfetmelerinde yardımcı olur.
+
+## Pages
+
+- [Ana Sayfa](/): Tokyo'da Türkçe rehberlik hizmetine genel bakış ve öne çıkan hizmetler.
+- [Hakkımda](/hakkimda): Rehber hakkında bilgi — Japonya'da yaşayan Türk üniversite öğrencisinin hikayesi.
+- [Turlar](/turlar): Sunulan Tokyo tur ve rehberlik hizmetleri (ilk gün tanıtımı, yemek turu, fotoğraf rotası vb.).
+- [Galeri](/galeri): Tokyo ve Yokohama'dan gerçek gezi fotoğrafları.
+- [İletişim](/iletisim): WhatsApp ve e-posta üzerinden plan sormak ve iletişim.
