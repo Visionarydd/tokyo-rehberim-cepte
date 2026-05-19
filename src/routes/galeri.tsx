@@ -4,6 +4,10 @@ import gallery1 from "@/assets/gallery-1.png";
 import gallery2 from "@/assets/gallery-2.png";
 import gallery3 from "@/assets/gallery-3.png";
 import gallery4 from "@/assets/gallery-4.png";
+import gallery5 from "@/assets/gallery-5.png";
+import gallery6 from "@/assets/gallery-6.png";
+import gallery7 from "@/assets/gallery-7.png";
+import gallery8 from "@/assets/gallery-8.png";
 
 export const Route = createFileRoute("/galeri")({
   head: () => ({
@@ -12,8 +16,6 @@ export const Route = createFileRoute("/galeri")({
       { name: "description", content: "Tokyo ve Yokohama'dan gerçek kareler: Shibuya, Shinjuku, Asakusa, Odaiba, Minato Mirai ve daha fazlası." },
       { property: "og:title", content: "Galeri — Tokyo & Yokohama Türkçe Rehber" },
       { property: "og:description", content: "Tokyo ve Yokohama gezisi için ilham veren gerçek fotoğraflar." },
-      { property: "og:image", content: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=80" },
-      { name: "twitter:image", content: "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1600&q=80" },
     ],
   }),
   component: GalleryPage,
@@ -24,10 +26,10 @@ const items = [
   { img: gallery2, caption: "Shinjuku gece sokakları" },
   { img: gallery3, caption: "Asakusa · Senso-ji Tapınağı" },
   { img: gallery4, caption: "Minato Mirai — Yokohama" },
-  { img: "https://images.unsplash.com/photo-1565017228812-bea9c5dabe27?w=1400&q=80", caption: "Yokohama Çin Mahallesi" },
-  { img: "https://images.unsplash.com/photo-1554797589-7241bb691973?w=1400&q=80", caption: "Tokyo sokak lezzetleri" },
-  { img: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1400&q=80", caption: "Tokyo Tower" },
-  { img: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=1400&q=80", caption: "Odaiba sahili & Rainbow Bridge" },
+  { img: gallery5, caption: "Yokohama Çin Mahallesi" },
+  { img: gallery6, caption: "Tokyo sokak lezzetleri" },
+  { img: gallery7, caption: "Tokyo Tower" },
+  { img: gallery8, caption: "Odaiba sahili & Rainbow Bridge" },
   { img: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1400&q=80", caption: "Sakura sezonu — Tokyo" },
 ];
 
