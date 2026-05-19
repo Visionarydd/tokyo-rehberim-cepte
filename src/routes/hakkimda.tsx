@@ -12,6 +12,22 @@ export const Route = createFileRoute("/hakkimda")({
       { property: "og:image", content: sakura },
       { name: "twitter:image", content: sakura },
     ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Tokyo Türkçe Rehber",
+          description:
+            "Ocak 2024'ten beri Japonya'da yaşayan Türk üniversite öğrencisi; Tokyo'ya gelen Türklere Türkçe rehberlik yapıyor.",
+          jobTitle: "Türkçe Tokyo Rehberi",
+          knowsLanguage: ["Turkish", "Japanese", "English"],
+          homeLocation: { "@type": "City", name: "Tokyo" },
+          url: "https://tokyo-rehberim-cepte.lovable.app/hakkimda",
+        }),
+      },
+    ],
   }),
   component: AboutPage,
 });
