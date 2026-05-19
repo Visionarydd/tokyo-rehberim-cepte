@@ -16,15 +16,15 @@ export const Route = createFileRoute("/galeri")({
 });
 
 const items = [
-  { img: "https://images.unsplash.com/photo-1542051841857-5f90071e7989?w=1400&q=80", caption: "Shibuya Crossing — Tokyo" },
+  { img: "https://images.unsplash.com/photo-1542931287-023b922fa89b?w=1400&q=80", caption: "Shibuya Crossing — Tokyo" },
   { img: "https://images.unsplash.com/photo-1554797589-7241bb691973?w=1400&q=80", caption: "Shinjuku gece sokakları" },
-  { img: "https://images.unsplash.com/photo-1583416750470-965b2707b355?w=1400&q=80", caption: "Asakusa · Senso-ji Tapınağı" },
-  { img: "https://images.unsplash.com/photo-1526481280690-b03a8865dfe0?w=1400&q=80", caption: "Minato Mirai — Yokohama" },
-  { img: "https://images.unsplash.com/photo-1554188248-986adbb73be4?w=1400&q=80", caption: "Yokohama Çin Mahallesi" },
-  { img: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=1400&q=80", caption: "Tokyo sokak lezzetleri" },
-  { img: "https://images.unsplash.com/photo-1480796927426-f609979314bd?w=1400&q=80", caption: "Tokyo Tower" },
-  { img: "https://images.unsplash.com/photo-1493780474015-ba834fd0ce2f?w=1400&q=80", caption: "Odaiba sahili & Rainbow Bridge" },
-  { img: "https://images.unsplash.com/photo-1545569341-9eb8b30979d9?w=1400&q=80", caption: "Sakura sezonu" },
+  { img: "https://images.unsplash.com/photo-1570459027562-4a916cb6235e?w=1400&q=80", caption: "Asakusa · Senso-ji Tapınağı" },
+  { img: "https://images.unsplash.com/photo-1601981287877-d717e3bb83df?w=1400&q=80", caption: "Minato Mirai — Yokohama" },
+  { img: "https://images.unsplash.com/photo-1565017228812-bea9c5dabe27?w=1400&q=80", caption: "Yokohama Çin Mahallesi" },
+  { img: "https://images.unsplash.com/photo-1554797589-7241bb691973?w=1400&q=80", caption: "Tokyo sokak lezzetleri" },
+  { img: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?w=1400&q=80", caption: "Tokyo Tower" },
+  { img: "https://images.unsplash.com/photo-1513407030348-c983a97b98d8?w=1400&q=80", caption: "Odaiba sahili & Rainbow Bridge" },
+  { img: "https://images.unsplash.com/photo-1522383225653-ed111181a951?w=1400&q=80", caption: "Sakura sezonu — Tokyo" },
 ];
 
 function GalleryPage() {
