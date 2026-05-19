@@ -151,12 +151,8 @@ function ToursPage() {
                   </div>
                   <div>
                     <h3 className="text-sm font-semibold text-foreground">Fiyat</h3>
-                    <p className="mt-2 text-2xl font-semibold text-foreground">10.000 Yen</p>
+                    <p className="mt-2 text-2xl font-semibold text-foreground">15.000 Yen</p>
                     <p className="mt-1 text-sm text-muted-foreground">Türk Lirası karşılığı ve Türk kredi kartı ile ödeme imkanı bulunur.</p>
-                  </div>
-                  <div>
-                    <h3 className="text-sm font-semibold text-foreground">Notlar</h3>
-                    <p className="mt-2 text-sm text-muted-foreground">Ulaşım ücretleri müşteriye aittir. Ödeme hizmet öncesi veya başlangıcında yapılır.</p>
                   </div>
                 </div>
               </div>
