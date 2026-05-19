@@ -235,6 +235,9 @@ function ToursPage() {
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
               Fiyatlar kişi sayısına göre belirlenir. Maksimum 5 yetişkin kabul edilmektedir.
             </p>
+            <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+              Ödeme: Türk banka transferi veya Japonya'da nakit yen olarak yapılabilir.
+            </p>
           </div>
           <div className="grid gap-3 sm:grid-cols-2">
             {["1 kişi: 20,000 yen", "2 kişi: 13,000 yen / kişi", "3 kişi: 11,000 yen / kişi", "4 kişi: 9,000 yen / kişi", "5 kişi: 8,000 yen / kişi"].map((item) => (
