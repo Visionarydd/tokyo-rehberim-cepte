@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import { SiteLayout } from "@/components/SiteLayout";
-import { MapPin, MessageCircle } from "lucide-react";
+import { MapPin, MessageCircle, Mail } from "lucide-react";
 
 export const Route = createFileRoute("/iletisim")({
   head: () => ({
@@ -105,6 +105,13 @@ function ContactPage() {
               <div>
                 <div className="text-sm font-semibold">WhatsApp</div>
                 <div className="mt-2 text-xs font-medium text-primary">Direkt yaz →</div>
+              </div>
+            </a>
+            <a href="mailto:cnbrkkrslh0001@gmail.com" className="flex items-start gap-4 rounded-lg border border-border bg-card p-5 transition-colors hover:border-primary/45">
+              <Mail className="mt-0.5 text-primary" size={20} />
+              <div>
+                <div className="text-sm font-semibold">E-posta</div>
+                <div className="mt-2 text-xs font-medium text-primary">Mesaj gönder →</div>
               </div>
             </a>
             <div className="flex items-start gap-4 rounded-lg border border-border bg-card p-5">
