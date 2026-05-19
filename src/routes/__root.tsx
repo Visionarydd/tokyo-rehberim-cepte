@@ -29,14 +29,18 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
+      { title: "Tokyo Rehberi | Uygun Fiyatlı Tokyo Turları" },
+      { name: "description", content: "Tokyo’da yaşayan Türk üniversite öğrencisi ile uygun fiyatlı Tokyo turları. Shibuya, Shinjuku, Asakusa, sakura noktaları, yemek mekanları ve lokal deneyimler." },
       { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { property: "og:title", content: "Tokyo Rehberi | Uygun Fiyatlı Tokyo Turları" },
+      { property: "og:description", content: "Tokyo’da yaşayan Türk üniversite öğrencisi ile uygun fiyatlı Tokyo turları. Shibuya, Shinjuku, Asakusa, sakura noktaları, yemek mekanları ve lokal deneyimler." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Tokyo Rehberi | Uygun Fiyatlı Tokyo Turları" },
+      { name: "twitter:description", content: "Tokyo’da yaşayan Türk üniversite öğrencisi ile uygun fiyatlı Tokyo turları. Shibuya, Shinjuku, Asakusa, sakura noktaları, yemek mekanları ve lokal deneyimler." },
+      { property: "og:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c2fa4ff7-7a58-499b-83f9-fa6ec88530f3" },
+      { name: "twitter:image", content: "https://storage.googleapis.com/gpt-engineer-file-uploads/attachments/og-images/c2fa4ff7-7a58-499b-83f9-fa6ec88530f3" },
     ],
     links: [
       {
