@@ -1,6 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const links = [
   { to: "/", label: "Anasayfa" },
@@ -17,8 +18,8 @@ export function SiteHeader() {
     <header className="sticky top-0 z-40 border-b border-border/70 bg-background/88 backdrop-blur-xl">
       <div className="container-narrow flex h-16 items-center justify-between">
         <Link to="/" className="flex items-center gap-3">
-          <span className="flex h-9 w-9 items-center justify-center rounded-md bg-primary text-primary-foreground font-serif text-sm">
-            東
+          <span className="flex h-10 w-10 items-center justify-center overflow-hidden rounded-md bg-secondary">
+            <img src={logo} alt="Tokyo Türkçe Rehber logosu" width={40} height={40} className="h-full w-full object-contain" />
           </span>
           <span className="leading-tight">
             <span className="block text-sm font-semibold text-foreground">Tokyo Türkçe Rehber</span>
