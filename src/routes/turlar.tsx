@@ -16,8 +16,8 @@ export const Route = createFileRoute("/turlar")({
       { name: "description", content: "Tokyo'da Türkçe rehberlik, ilk gün desteği, yemek rotası ve kişiye özel gezi planları." },
       { property: "og:title", content: "Tokyo Türkçe Rehberlik Hizmetleri" },
       { property: "og:description", content: "Samimi, güvenilir ve öğrenci dostu Tokyo gezi hizmetleri." },
-      { property: "og:image", content: tokyo },
-      { name: "twitter:image", content: tokyo },
+      { property: "og:image", content: gallery1 },
+      { name: "twitter:image", content: gallery1 },
     ],
     scripts: [
       {
@@ -46,7 +46,7 @@ export const Route = createFileRoute("/turlar")({
 
 const tours = [
   {
-    img: tokyo,
+    img: gallery1,
     city: "Tokyo",
     title: "Modern Tokyo Deneyimi",
     route: "Shibuya + Harajuku + Shinjuku",
@@ -56,7 +56,7 @@ const tours = [
     highlights: ["Shibuya Crossing & Hachiko", "Harajuku Takeshita Street", "Meiji Shrine", "Shinjuku şehir manzarası & Kabukicho"],
   },
   {
-    img: torii,
+    img: gallery3,
     city: "Tokyo",
     title: "Geleneksel + Modern Karışık",
     route: "Asakusa + Ueno + Akihabara",
@@ -66,7 +66,7 @@ const tours = [
     highlights: ["Senso-ji Tapınağı", "Nakamise Street", "Ueno Park", "Akihabara"],
   },
   {
-    img: tokyo,
+    img: gallery7,
     city: "Tokyo",
     title: "Lüks & Şehir Manzarası",
     route: "Roppongi + Tokyo Tower + Azabudai Hills + Shibuya",
@@ -76,7 +76,7 @@ const tours = [
     highlights: ["Roppongi Hills", "Tokyo Tower", "Azabudai Hills", "Shibuya gece ışıkları"],
   },
   {
-    img: sakura,
+    img: gallery8,
     city: "Tokyo",
     title: "Deniz & Şehir Kaçamağı",
     route: "Odaiba + Rainbow Bridge + Ginza",
@@ -86,7 +86,7 @@ const tours = [
     highlights: ["Odaiba sahil yürüyüşü", "Rainbow Bridge manzarası", "Opsiyonel teamLab Planets", "Ginza"],
   },
   {
-    img: food,
+    img: gallery2,
     city: "Tokyo",
     title: "Gece Hayatı Deneyimi",
     route: "Shinjuku + Golden Gai + Shibuya",
@@ -96,7 +96,7 @@ const tours = [
     highlights: ["Kabukicho", "Golden Gai", "Izakaya deneyimi", "Shibuya gece turu"],
   },
   {
-    img: kyoto,
+    img: gallery1,
     city: "Tokyo",
     title: "Alışveriş & Trend Turu",
     route: "Shibuya + Harajuku + Ginza",
@@ -106,7 +106,7 @@ const tours = [
     highlights: ["Shibuya mağazalar", "Harajuku streetwear", "Ginza"],
   },
   {
-    img: tokyo,
+    img: gallery1,
     city: "Tokyo",
     title: "Anime & Kültür Turu",
     route: "Akihabara + Ikebukuro",
@@ -116,7 +116,7 @@ const tours = [
     highlights: ["Akihabara", "Ikebukuro", "Anime mağazaları"],
   },
   {
-    img: fuji,
+    img: gallery4,
     city: "Yokohama",
     title: "Yokohama Günübirlik Tur",
     route: "Minato Mirai + Chinatown + Red Brick Warehouse",
@@ -142,7 +142,7 @@ function ToursPage() {
         <article className="mb-10 overflow-hidden rounded-lg border border-primary/25 bg-card shadow-sm">
           <div className="grid gap-0 lg:grid-cols-[0.95fr_1.05fr]">
             <img
-              src={tokyo}
+              src={gallery9}
               alt="İlk Gün Karşılama ve Destek Paketi"
               width={1200}
               height={900}
