@@ -26,7 +26,7 @@ export function SiteFooter() {
           <div className="mb-3 font-medium">İletişim</div>
           <ul className="space-y-2 text-muted-foreground">
             <li><a href="https://wa.me/08062325121" target="_blank" rel="noopener" className="hover:text-primary">WhatsApp üzerinden yazın</a></li>
-            <li>E-posta: merhaba@tokyorehber.com</li>
+            <li><a href="mailto:cnbrkkrslh0001@gmail.com" className="hover:text-primary">cnbrkkrslh0001@gmail.com</a></li>
             <li>Tokyo merkezli · Esnek rota</li>
           </ul>
         </div>
