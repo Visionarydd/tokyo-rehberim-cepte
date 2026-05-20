@@ -1,11 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/SiteLayout";
-import torii from "@/assets/gallery-torii.jpg";
-import tokyo from "@/assets/gallery-tokyo.jpg";
-import kyoto from "@/assets/gallery-kyoto.jpg";
-import food from "@/assets/gallery-food.jpg";
-import fuji from "@/assets/gallery-fuji.jpg";
-import sakura from "@/assets/gallery-sakura.jpg";
+import gallery1 from "@/assets/gallery-1.png";
+import gallery2 from "@/assets/gallery-2.png";
+import gallery3 from "@/assets/gallery-3.png";
+import gallery4 from "@/assets/gallery-4.png";
+import gallery6 from "@/assets/gallery-6.png";
+import gallery7 from "@/assets/gallery-7.png";
+import gallery8 from "@/assets/gallery-8.png";
+import gallery9 from "@/assets/gallery-9.png";
 
 export const Route = createFileRoute("/turlar")({
   head: () => ({
