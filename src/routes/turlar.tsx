@@ -106,7 +106,7 @@ const tours = [
     highlights: ["Shibuya mağazalar", "Harajuku streetwear", "Ginza"],
   },
   {
-    img: gallery1,
+    img: gallery6,
     city: "Tokyo",
     title: "Anime & Kültür Turu",
     route: "Akihabara + Ikebukuro",
